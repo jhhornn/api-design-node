@@ -39,10 +39,10 @@ Note: Before running the tests for the exercise, ensure that mongoDB is running.
 * branch - `lesson-1`
 
 In this lesson you'll be creating a simple Express based API in node, just to get your feet wet.
-- [ ] install dependencies with yarn (prefered for version locking) or npm
-- [ ] create a route that sends back some json
-- [ ] create a route that accepts json and logs it
-- [ ] start the server
+- [x] install dependencies with yarn (prefered for version locking) or npm
+- [x] create a route that sends back some json
+- [x] create a route that accepts json and logs it
+- [x] start the server
 
 ### Routing
 * branch - `lesson-2`
