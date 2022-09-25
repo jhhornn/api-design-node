@@ -1,5 +1,7 @@
 import controllers from '../item.controllers'
 import { isFunction } from 'lodash'
+import { crudControllers } from '../../utils/crud'
+import { Item } from './item.model'
 
 describe('item controllers', () => {
   test('has crud controllers', () => {
@@ -16,3 +18,5 @@ describe('item controllers', () => {
     )
   })
 })
+
+export default crudControllers(Item)
