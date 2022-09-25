@@ -13,7 +13,8 @@ const itemSchema = new mongoose.Schema(
       required: true,
       enum: ['active', 'complete', 'pastdue'],
       default: 'active'
-    }
+    },
+    notes: String
   },
   { timestamps: true }
 )
