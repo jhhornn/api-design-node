@@ -16,7 +16,7 @@
     "start": "node dist/index.js"
   },
   "dependencies": {
-    "bcryptjs": "^2.4.3",
+    "bcrypt": "^5.0.0",
     "body-parser": "^1.18.3",
     "cors": "^2.8.5",
     "cuid": "^2.1.4",
@@ -24,7 +24,7 @@
     "express": "^4.16.4",
     "jsonwebtoken": "^8.4.0",
     "lodash": "^4.17.11",
-    "mongoose": "^6.6.1",
+    "mongoose": "^5.3.13",
     "morgan": "^1.9.1",
     "validator": "^10.9.0"
   },
