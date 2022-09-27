@@ -2,5 +2,5 @@ export const config = {
   secrets: {
     jwt: 'learneverything'
   },
-  dbUrl: 'mongodb://localhost:27017/api-design'
+  dbUrl: 'mongodb://0.0.0.0:27017/api-design'
 }

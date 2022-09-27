@@ -1,16 +1,17 @@
-import mongoose from 'mongoose'
 import cuid from 'cuid'
 import _ from 'lodash'
+import mongoose from 'mongoose'
 import { Item } from './src/resources/item/item.model'
 import { List } from './src/resources/list/list.model'
 import { User } from './src/resources/user/user.model'
 
 const models = { User, List, Item }
+jest.setTimeout(10000)
 
 const url =
   process.env.MONGODB_URI ||
   process.env.DB_URL ||
-  'mongodb://localhost:27017/tipe-devapi-testing'
+  'mongodb://0.0.0.0:27017/tipe-devapi-testing'
 
 global.newId = () => {
   return mongoose.Types.ObjectId()
@@ -52,7 +53,12 @@ beforeEach(async done => {
   done()
 })
 afterEach(async done => {
-  await mongoose.connection.db.dropDatabase()
+  try {
+    await mongoose.connection.db.dropDatabase()
+    await mongoose.disconnect()
+  } catch (err) {
+    console.log(err)
+  }
   await mongoose.disconnect()
   return done()
 })
